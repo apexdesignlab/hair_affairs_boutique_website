@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hair Affairs Boutique | Locs Specialist South Woodford</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FAF6F0;
+    --warm-white: #F5EFE6;
+    --gold: #B8965A;
+    --gold-light: #D4AF78;
+    --dark: #1A1410;
+    --text: #3A2E25;
+    --muted: #7A6B5A;
+    --border: #E8DDD0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: rgba(250,246,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: var(--dark);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-decoration: none;
+  }
+  .nav-logo span { display: block; font-weight: 300; font-size: 0.7rem; letter-spacing: 0.3em; color: var(--gold); }
+  .nav-links { display: flex; gap: 40px; list-style: none; }
+  .nav-links a {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-book {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: var(--dark);
+    color: var(--cream);
+    padding: 12px 28px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid var(--dark);
+  }
+  .nav-book:hover { background: var(--gold); border-color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 85px;
+  }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px 80px 80px;
+    position: relative;
+  }
+  .hero-left::after {
+    content: '';
+    position: absolute;
+    top: 20%; bottom: 20%; right: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--border), transparent);
+  }
+  .hero-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .hero-tag::before { content: ''; width: 40px; height: 1px; background: var(--gold); }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 5vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--dark);
+    margin-bottom: 32px;
+    letter-spacing: -0.01em;
+  }
+  .hero-title em { font-style: italic; color: var(--gold); }
+  .hero-desc {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--muted);
+    font-weight: 300;
+    max-width: 420px;
+    margin-bottom: 52px;
+  }
+  .hero-ctas { display: flex; gap: 16px; align-items: center; }
+  .btn-primary {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    background: var(--gold);
+    color: #fff;
+    padding: 16px 40px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid var(--gold);
+  }
+  .btn-primary:hover { background: var(--dark); border-color: var(--dark); }
+  .btn-ghost {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2px;
+    transition: all 0.3s;
+  }
+  .btn-ghost:hover { color: var(--gold); border-color: var(--gold); }
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    margin-top: 64px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--dark);
+    display: block;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 6px;
+    display: block;
+  }
+
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-img-main {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.92) saturate(1.1);
+    transition: transform 8s ease;
+  }
+  .hero-right:hover .hero-img-main { transform: scale(1.04); }
+  .hero-overlay-card {
+    position: absolute;
+    bottom: 48px; left: -36px;
+    background: var(--cream);
+    padding: 28px 32px;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    width: 240px;
+    animation: floatCard 0.8s ease forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+  }
+  @keyframes floatCard {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .card-rating { display: flex; gap: 4px; margin-bottom: 8px; }
+  .star { color: var(--gold); font-size: 0.8rem; }
+  .card-score {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--dark);
+    line-height: 1;
+  }
+  .card-count { font-size: 0.65rem; color: var(--muted); letter-spacing: 0.1em; margin-top: 4px; }
+  .card-badge {
+    margin-top: 16px;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+
+  /* STRIP */
+  .strip {
+    background: var(--dark);
+    color: var(--cream);
+    padding: 18px 0;
+    overflow: hidden;
+  }
+  .strip-inner {
+    display: flex;
+    gap: 80px;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+  }
+  .strip-item {
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    opacity: 0.8;
+    flex-shrink: 0;
+  }
+  .strip-dot { color: var(--gold); margin: 0 16px; }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ABOUT */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .about-img-wrap {
+    position: relative;
+    height: 680px;
+    overflow: hidden;
+  }
+  .about-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+  .about-img-accent {
+    position: absolute;
+    bottom: -1px; right: -1px;
+    width: 60%; height: 60%;
+    border: 2px solid var(--gold);
+    pointer-events: none;
+  }
+  .about-content {
+    padding: 100px 80px 80px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--warm-white);
+  }
+  .section-tag {
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-tag::before { content: ''; width: 30px; height: 1px; background: var(--gold); }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 3.5vw, 3.4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--dark);
+    margin-bottom: 28px;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .section-body {
+    font-size: 0.88rem;
+    line-height: 1.9;
+    color: var(--muted);
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .about-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 36px;
+  }
+  .badge {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 9px 18px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+
+  /* SERVICES */
+  .services { padding: 120px 80px; }
+  .services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 72px;
+  }
+  .services-title-wrap { max-width: 480px; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+  }
+  .service-card {
+    background: var(--cream);
+    padding: 48px 40px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--gold);
+    transition: width 0.4s;
+  }
+  .service-card:hover::before { width: 100%; }
+  .service-card:hover { background: var(--warm-white); }
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--border);
+    line-height: 1;
+    margin-bottom: 24px;
+    transition: color 0.3s;
+  }
+  .service-card:hover .service-num { color: var(--gold-light); }
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--dark);
+    margin-bottom: 10px;
+  }
+  .service-duration {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+  .service-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--gold);
+  }
+  .service-desc {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: var(--muted);
+    font-weight: 300;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* TEAM */
+  .team {
+    background: var(--dark);
+    padding: 120px 80px;
+    color: var(--cream);
+  }
+  .team-header { margin-bottom: 72px; }
+  .team-header .section-tag { color: var(--gold-light); }
+  .team-header .section-tag::before { background: var(--gold-light); }
+  .team-header .section-title { color: var(--cream); }
+  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .team-card { position: relative; overflow: hidden; group: true; }
+  .team-img-wrap {
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+  }
+  .team-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%) brightness(0.9);
+    transition: all 0.5s;
+  }
+  .team-card:hover .team-img { filter: grayscale(0%) brightness(1); transform: scale(1.04); }
+  .team-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(26,20,16,0.8) 0%, transparent 50%);
+  }
+  .team-info { margin-top: 24px; }
+  .team-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--cream);
+  }
+  .team-role {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-top: 6px;
+  }
+  .team-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .team-rating .stars { color: var(--gold); font-size: 0.75rem; }
+  .team-rating .score { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+  /* REVIEWS */
+  .reviews { padding: 120px 80px; background: var(--warm-white); }
+  .reviews-header { margin-bottom: 72px; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .review-card {
+    background: var(--cream);
+    padding: 40px 36px;
+    border: 1px solid var(--border);
+    transition: box-shadow 0.3s;
+  }
+  .review-card:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.06); }
+  .review-stars { color: var(--gold); font-size: 0.75rem; letter-spacing: 3px; margin-bottom: 20px; }
+  .review-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--dark);
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 24px;
+  }
+  .review-author { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+  .review-date { font-size: 0.65rem; color: var(--border); margin-top: 4px; }
+
+  /* HOURS */
+  .info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .hours-panel {
+    background: var(--dark);
+    padding: 100px 80px;
+    color: var(--cream);
+  }
+  .hours-panel .section-tag { color: var(--gold); }
+  .hours-panel .section-tag::before { background: var(--gold); }
+  .hours-panel .section-title { color: var(--cream); margin-bottom: 48px; }
+  .hours-list { list-style: none; }
+  .hours-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.82rem;
+  }
+  .hours-day { letter-spacing: 0.1em; color: rgba(255,255,255,0.7); }
+  .hours-time { color: var(--gold-light); font-size: 0.78rem; }
+  .hours-closed { color: rgba(255,255,255,0.3); }
+
+  .contact-panel {
+    background: var(--gold);
+    padding: 100px 80px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact-panel .section-tag { color: rgba(255,255,255,0.7); }
+  .contact-panel .section-tag::before { background: rgba(255,255,255,0.7); }
+  .contact-panel .section-title { color: #fff; margin-bottom: 40px; }
+  .contact-item {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  .contact-item:last-child { border-bottom: none; margin-bottom: 0; }
+  .contact-label { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 10px; }
+  .contact-value { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 400; color: #fff; line-height: 1.5; }
+  .amenities {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px;
+  }
+  .amenity {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.8);
+  }
+
+  /* BOOKING CTA */
+  .booking-cta {
+    text-align: center;
+    padding: 140px 80px;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .booking-cta::before {
+    content: 'BOOK';
+    position: absolute;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20rem;
+    font-weight: 700;
+    color: var(--border);
+    opacity: 0.3;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    letter-spacing: -0.05em;
+    white-space: nowrap;
+  }
+  .booking-cta .section-tag { justify-content: center; }
+  .booking-cta .section-tag::before { display: none; }
+  .booking-cta .section-title { text-align: center; max-width: 560px; margin: 0 auto 48px; }
+  .booking-cta .btn-primary { font-size: 0.7rem; padding: 20px 60px; }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.5);
+    padding: 60px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+  }
+  .footer-logo span { display: block; font-weight: 300; font-size: 0.6rem; letter-spacing: 0.3em; color: var(--gold); margin-top: 4px; }
+  .footer-copy { font-size: 0.65rem; letter-spacing: 0.1em; }
+  .footer-links { display: flex; gap: 32px; }
+  .footer-links a { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s; }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* MOBILE MENU TOGGLE */
+  .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+  .menu-toggle span { display: block; width: 24px; height: 1px; background: var(--dark); margin: 5px 0; transition: all 0.3s; }
+
+  /* ANIMATIONS */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 1024px) {
+    nav { padding: 20px 40px; }
+    .nav-links { display: none; }
+    .menu-toggle { display: block; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-right { height: 50vh; }
+    .hero-left { padding: 60px 40px; }
+    .hero-overlay-card { display: none; }
+    .about { grid-template-columns: 1fr; }
+    .about-img-wrap { height: 400px; }
+    .about-content { padding: 60px 40px; }
+    .services { padding: 80px 40px; }
+    .services-header { flex-direction: column; gap: 24px; align-items: flex-start; }
+    .services-grid { grid-template-columns: 1fr; }
+    .team { padding: 80px 40px; }
+    .team-grid { grid-template-columns: 1fr; }
+    .reviews { padding: 80px 40px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .info-section { grid-template-columns: 1fr; }
+    .hours-panel, .contact-panel { padding: 60px 40px; }
+    .booking-cta { padding: 80px 40px; }
+    footer { flex-direction: column; gap: 32px; text-align: center; padding: 48px 40px; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    Hair Affairs Boutique
+    <span>The Locked Hair Spa · South Woodford</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://www.fresha.com/a/hair-affairs-boutique-the-locked-hair-spa-london-unit-6-7-marlborough-business-centre-g3yerg6z/booking" class="nav-book" target="_blank">Book Now</a>
+  <button class="menu-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Sisterlocks® &amp; Traditional Locs</div>
+    <h1 class="hero-title">
+      Where Locs<br>
+      Become <em>Art</em>
+    </h1>
+    <p class="hero-desc">
+      South Woodford's premier locs boutique, specialising in Sisterlocks®, 
+      Brotherlocks and traditional locks. From your first consultation to 
+      your ongoing journey — we care for every strand.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://www.fresha.com/a/hair-affairs-boutique-the-locked-hair-spa-london-unit-6-7-marlborough-business-centre-g3yerg6z/booking" class="btn-primary" target="_blank">Book Appointment</a>
+      <a href="#services" class="btn-ghost">View Services</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <span class="stat-num">5.0</span>
+        <span class="stat-label">★ Rating</span>
+      </div>
+      <div>
+        <span class="stat-num">455+</span>
+        <span class="stat-label">Reviews</span>
+      </div>
+      <div>
+        <span class="stat-num">15+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img
+      src="https://images.fresha.com/locations/location-profile-images/661868/4309088/973d1a8c-151c-4467-b8c4-bae17f3c6aa7-HairAffairsBoutiqueTheLockedHairSpa-GB-England-London-SouthWoodford-Fresha.jpg?class=venue-gallery-large&f_width=1200"
+      alt="Hair Affairs Boutique salon interior"
+      class="hero-img-main"
+    >
+    <div class="hero-overlay-card">
+      <div class="card-rating">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+      </div>
+      <div class="card-score">5.0</div>
+      <div class="card-count">455 verified reviews</div>
+      <div class="card-badge">⬛ Black-Owned · Woman-Owned</div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-inner">
+    <span class="strip-item">Sisterlocks®<span class="strip-dot">◆</span></span>
+    <span class="strip-item">Brotherlocks<span class="strip-dot">◆</span></span>
+    <span class="strip-item">Traditional Locks<span class="strip-dot">◆</span></span>
+    <span class="strip-item">Hair Spa Treatments<span class="strip-dot">◆</span></span>
+    <span class="strip-item">Retightening<span class="strip-dot">◆</span></span>
+    <span class="strip-item">Loc Styling<span class="strip-dot">◆</span></span>
+    <span class="strip-item">Black-Owned<span class="strip-dot">◆</span></span>
+    <span class="strip-item">Woman-Owned<span class="strip-dot">◆</span></span>
+    <!-- duplicate for seamless loop -->
+    <span class="strip-item">Sisterlocks®<span class="strip-dot">◆</span></span>
+    <span class="strip-item">Brotherlocks<span class="strip-dot">◆</span></span>
+    <span class="strip-item">Traditional Locks<span class="strip-dot">◆</span></span>
+    <span class="strip-item">Hair Spa Treatments<span class="strip-dot">◆</span></span>
+    <span class="strip-item">Retightening<span class="strip-dot">◆</span></span>
+    <span class="strip-item">Loc Styling<span class="strip-dot">◆</span></span>
+    <span class="strip-item">Black-Owned<span class="strip-dot">◆</span></span>
+    <span class="strip-item">Woman-Owned<span class="strip-dot">◆</span></span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-img-wrap">
+    <img
+      src="https://images.fresha.com/locations/location-profile-images/661868/4309090/8257b401-5b35-4695-962c-cef6c143c97e-HairAffairsBoutiqueTheLockedHairSpa-GB-England-London-SouthWoodford-Fresha.jpg?class=venue-gallery-large&f_width=900"
+      alt="Hair Affairs Boutique service"
+      class="about-img"
+    >
+    <div class="about-img-accent"></div>
+  </div>
+  <div class="about-content">
+    <div class="section-tag">Our Story</div>
+    <h2 class="section-title">The Art of<br>Hair <em>Locking</em></h2>
+    <p class="section-body">
+      At Hair Affairs Boutique, the art of hair locking is taken to new heights, 
+      catering to everyone from children to adults with a passion for Sisterlocks® 
+      and traditional locks.
+    </p>
+    <p class="section-body">
+      The salon offers a range of services, ensuring each client leaves feeling 
+      revitalised and confident. With a commitment to healthy hair care, the boutique 
+      provides a nurturing environment perfect for maintaining or beginning your loc journey.
+    </p>
+    <p class="section-body">
+      Founded by Michelle, Master Sisterloctician, our team brings years of expertise 
+      and genuine passion to every appointment — because your hair deserves nothing less.
+    </p>
+    <div class="about-badges">
+      <span class="badge">Black-Owned</span>
+      <span class="badge">Woman-Owned</span>
+      <span class="badge">Wheelchair Accessible</span>
+      <span class="badge">Vegan Products</span>
+      <span class="badge">Near Public Transport</span>
+      <span class="badge">Parking Available</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header">
+    <div class="services-title-wrap">
+      <div class="section-tag">What We Offer</div>
+      <h2 class="section-title">Our <em>Services</em></h2>
+    </div>
+    <a href="https://www.fresha.com/a/hair-affairs-boutique-the-locked-hair-spa-london-unit-6-7-marlborough-business-centre-g3yerg6z/booking" class="btn-primary" target="_blank">Book a Service</a>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card fade-up">
+      <div class="service-num">01</div>
+      <div class="service-name">Sisterlock Retightening</div>
+      <div class="service-duration">4 hours</div>
+      <div class="service-price">£95</div>
+      <div class="service-desc">Retightening of Sisterlocks, Brotherlocks and small locks to keep your journey looking impeccable.</div>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-num">02</div>
+      <div class="service-name">Traditional Lock Retightening</div>
+      <div class="service-duration">2 hours</div>
+      <div class="service-price">£70</div>
+      <div class="service-desc">Expert retightening of traditional locks, maintaining the health and structure of your locs.</div>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-num">03</div>
+      <div class="service-name">Children's Retightening</div>
+      <div class="service-duration">4 hours</div>
+      <div class="service-price">£60</div>
+      <div class="service-desc">Gentle, caring retightening service tailored specially for our younger clients.</div>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-num">04</div>
+      <div class="service-name">Establishment Consultation</div>
+      <div class="service-duration">1 hr 30 min</div>
+      <div class="service-price">£40</div>
+      <div class="service-desc">Sisterlocks® establishment consultation to begin your beautiful loc journey with confidence.</div>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-num">05</div>
+      <div class="service-name">Locked Hair Spa</div>
+      <div class="service-duration">1 hr 30 min</div>
+      <div class="service-price">£150</div>
+      <div class="service-desc">A full luxury spa treatment for your locs — deep cleanse, steam, moisture and restoration.</div>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-num">06</div>
+      <div class="service-name">Self-Retightening Class</div>
+      <div class="service-duration">4 hours</div>
+      <div class="service-price">£250</div>
+      <div class="service-desc">Learn the art of self-retightening from our certified consultants. Empower your own loc journey.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="team-header">
+    <div class="section-tag">Meet the Experts</div>
+    <h2 class="section-title">Our <em>Team</em></h2>
+  </div>
+  <div class="team-grid">
+    <div class="team-card fade-up">
+      <div class="team-img-wrap">
+        <img
+          src="https://cdn-partners-api.fresha.com/employee-avatars/processed/172322/medium/282171ee-8168-46ac-8c92-726c49a5eedd-Michelle%20Yearwood-Grazette%20coloured-00047.jpeg"
+          alt="Michelle - Master Sisterloctician"
+          class="team-img"
+          onerror="this.style.background='#2a2020';this.style.minHeight='100%';"
+        >
+        <div class="team-img-overlay"></div>
+      </div>
+      <div class="team-info">
+        <div class="team-name">Michelle</div>
+        <div class="team-role">Master Sisterloctician · Founder</div>
+        <div class="team-rating">
+          <span class="stars">★★★★★</span>
+          <span class="score">5.0</span>
+        </div>
+      </div>
+    </div>
+    <div class="team-card fade-up">
+      <div class="team-img-wrap">
+        <img
+          src="https://cdn-partners-api.fresha.com/employee-avatars/processed/368266/medium/020b9d41-f009-4438-9b41-8407c6487bb0-bc34f7b8-2d87-4222-bab2-449e84690a28.jpeg"
+          alt="Claudia - Interlock Technician"
+          class="team-img"
+          onerror="this.style.background='#201a1a';this.style.minHeight='100%';"
+        >
+        <div class="team-img-overlay"></div>
+      </div>
+      <div class="team-info">
+        <div class="team-name">Claudia</div>
+        <div class="team-role">Interlock Technician</div>
+        <div class="team-rating">
+          <span class="stars">★★★★★</span>
+          <span class="score">4.9</span>
+        </div>
+      </div>
+    </div>
+    <div class="team-card fade-up">
+      <div class="team-img-wrap">
+        <img
+          src="https://cdn-partners-api.fresha.com/employee-avatars/processed/1494749/medium/2a829550-5e54-49c2-a6b3-73ddea91f83d-42010b5e-c9f7-4c28-9779-3db156f064c9.jpeg"
+          alt="Deborah - Certified SL Consultant"
+          class="team-img"
+          onerror="this.style.background='#1a1a20';this.style.minHeight='100%';"
+        >
+        <div class="team-img-overlay"></div>
+      </div>
+      <div class="team-info">
+        <div class="team-name">Deborah</div>
+        <div class="team-role">Certified SL Consultant</div>
+        <div class="team-rating">
+          <span class="stars">★★★★★</span>
+          <span class="score">4.7</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="reviews-header">
+    <div class="section-tag">Client Love</div>
+    <h2 class="section-title">What Our Clients <em>Say</em></h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card fade-up">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Michelle is lovely. My hair was completed super quick and looked great. I love it."</div>
+      <div class="review-author">Irene N.</div>
+      <div class="review-date">February 2026</div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Friendly professional and fast service. The staff are very warm, accommodating and welcoming."</div>
+      <div class="review-author">Lue-Ann M.</div>
+      <div class="review-date">February 2026</div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Maia has been doing my hair for 5 years and I've never looked back. She really knows how to look after my hair and I always get compliments on the health and neatness of my locs."</div>
+      <div class="review-author">Naivasha M.</div>
+      <div class="review-date">April 2024</div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"I must say that I am extremely pleased with the results. Michelle was professional, friendly and very quick. You deserve more than 5 stars."</div>
+      <div class="review-author">Anonymous</div>
+      <div class="review-date">Verified Review</div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Fantastic as always. Friendly & beautiful environment. I always feel very relaxed here."</div>
+      <div class="review-author">Natalie W. &amp; Violet K.</div>
+      <div class="review-date">March 2026</div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"This was my first visit with what I consider an almost impossible task of repairing some severely damaged locs. Hair Affairs you have gained a permanent client."</div>
+      <div class="review-author">South Woodford Client</div>
+      <div class="review-date">Verified Review</div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO -->
+<section class="info-section" id="contact">
+  <div class="hours-panel">
+    <div class="section-tag">Opening Times</div>
+    <h2 class="section-title">When to <em>Visit</em></h2>
+    <ul class="hours-list">
+      <li class="hours-item">
+        <span class="hours-day">Monday</span>
+        <span class="hours-time">9:00 AM – 1:00 PM · 1:30 – 6:30 PM</span>
+      </li>
+      <li class="hours-item">
+        <span class="hours-day">Tuesday</span>
+        <span class="hours-time">10:00 AM – 2:00 PM · 2:30 – 9:30 PM</span>
+      </li>
+      <li class="hours-item">
+        <span class="hours-day">Wednesday</span>
+        <span class="hours-time">10:00 AM – 2:00 PM · 2:30 – 6:30 PM</span>
+      </li>
+      <li class="hours-item">
+        <span class="hours-day">Thursday</span>
+        <span class="hours-time">10:00 AM – 2:00 PM · 2:30 – 9:30 PM</span>
+      </li>
+      <li class="hours-item">
+        <span class="hours-day">Friday</span>
+        <span class="hours-time">10:00 AM – 2:00 PM · 2:30 – 6:30 PM</span>
+      </li>
+      <li class="hours-item">
+        <span class="hours-day">Saturday</span>
+        <span class="hours-closed">Closed</span>
+      </li>
+      <li class="hours-item">
+        <span class="hours-day">Sunday</span>
+        <span class="hours-closed">Closed</span>
+      </li>
+    </ul>
+  </div>
+  <div class="contact-panel">
+    <div class="section-tag">Find Us</div>
+    <h2 class="section-title">Visit the<br><em>Boutique</em></h2>
+    <div class="contact-item">
+      <div class="contact-label">Address</div>
+      <div class="contact-value">Unit 6–7 Marlborough Business Centre<br>96 George Lane<br>South Woodford, London E18 1AD</div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-label">Transport</div>
+      <div class="contact-value">South Woodford Station (Central Line)<br>Bus stops nearby · Parking available</div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-label">Book Online</div>
+      <div class="contact-value">Available via Fresha</div>
+    </div>
+    <div class="amenities">
+      <span class="amenity">♿ Accessible</span>
+      <span class="amenity">🌱 Vegan</span>
+      <span class="amenity">🚌 Public Transport</span>
+      <span class="amenity">🅿 Parking</span>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING CTA -->
+<section class="booking-cta">
+  <div class="section-tag">Start Your Journey</div>
+  <h2 class="section-title">Ready to Begin<br>Your <em>Loc Journey?</em></h2>
+  <a href="https://www.fresha.com/a/hair-affairs-boutique-the-locked-hair-spa-london-unit-6-7-marlborough-business-centre-g3yerg6z/booking" class="btn-primary" target="_blank">Book Your Appointment</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    Hair Affairs Boutique
+    <span>The Locked Hair Spa · South Woodford</span>
+  </div>
+  <div class="footer-copy">© 2026 Hair Affairs Boutique. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#team">Team</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script>
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), 100);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Stagger siblings
+  document.querySelectorAll('.services-grid, .team-grid, .reviews-grid').forEach(grid => {
+    grid.querySelectorAll('.fade-up').forEach((card, i) => {
+      card.style.transitionDelay = `${i * 0.1}s`;
+    });
+  });
+</script>
+</body>
+</html>
